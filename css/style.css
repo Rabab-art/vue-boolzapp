@@ -1,45 +1,38 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(
+      to bottom,
+      #00bfa5 15%,
+      white 15%,
+      white 100%
+    );
+  }
+
+
+  .app{
+   height: 90%;
+  }
+  .container{
+      height: 90%;
+  }
+
+  .bg-light-gray {
+background-color:lightgrey ;
+  }
+
+  .bg-chat-color{
+background-color:grey ;
+  }
+
+  .chat-header{
+      height: 70px;
+  }
+  .chat-footer{
+    height: 70px;
+  }
+
+.bg-white{
+    background-color: white;
 }
-
-
-
-.chat{
-    
-    
-    margin-bottom: 15px;     
-}
-
-.color{
-    height: 100px;
-    background-color: lawngreen;
-    
-}
-.row{
-    height: calc(100vh - 30px);
-    margin-bottom: 15px;
-   padding-left: 0;
-   padding-right: 0;}
-
- .col-4{
-     background-color: rgb(228, 228, 228);
-     padding: 0;
-     border-right: 1px solid blue;
-     
- }
-
- .col-8{
-     background-color: beige;
-     padding: 0;
- }
-
- .utente,.utente-michi{
-     height: 50px;
-     background-color: lightgrey;
- }
- .notifica{
-     height: 80px;
-     background-color: rgb(9, 140, 221);
- }
