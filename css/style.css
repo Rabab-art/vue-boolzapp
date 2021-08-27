@@ -11,28 +11,75 @@ body {
   }
 
 
-  .app{
+  .app .container{
    height: 90%;
-  }
-  .container{
-      height: 90%;
-  }
-
-  .bg-light-gray {
-background-color:lightgrey ;
   }
 
   .bg-chat-color{
 background-color:grey ;
   }
 
-  .chat-header{
+  .chat-header,.chat-footer{
       height: 70px;
   }
-  .chat-footer{
-    height: 70px;
-  }
 
-.bg-white{
+
+.chat{
+background-image:url(../img/mine.jpg) ;
+}
+
+.user,.notification{
+    height: 80px;
+}
+
+.bg-color{
+    background-color: rgb(245, 238, 238);
+}
+.search{
+height: 50px;
+position: relative;
+
+}
+.search .fa-search{
+    position: absolute;
+    left:20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+input{
+    border: 0;
+    height: 100%;
+    padding-left: 50px;
+}
+
+.media{
+    position: relative;
+    background-color: rgb(169, 218, 247);
+}
+
+.fa-bell-slash{
+    position: absolute;
+    left:20px;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    padding: 15px;
+    border-radius: 100%;
     background-color: white;
+    color: rgb(169, 218, 247);
+}
+
+.media-text{
+    position: absolute;
+    left:80px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.media-text p{
+    text-decoration: underline;
+}
+.media-text h6{
+    margin-bottom: 2px;
 }
