@@ -87,3 +87,30 @@ input{
 .media-text h6{
     margin-bottom: 2px;
 }
+
+/* ELEMENTI DELLO USER */
+figure{
+    position: relative;
+}
+figure img{
+    height: 70px;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    border-radius: 50%;
+  
+}
+
+figure #name{
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    /* transform: translateY(-50%); */
+    font-size: 15px;
+}
+
+.icons{
+margin-right:5px ;
+font-size: 20px;
+color: grey;
+}
+
