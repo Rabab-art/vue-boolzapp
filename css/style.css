@@ -1,5 +1,5 @@
 
-
+/* STRUTTURA BASE  */
 body {
     height: 100vh;
     background-image: linear-gradient(
@@ -28,6 +28,8 @@ background-color:grey ;
 background-image:url(../img/mine.jpg) ;
 }
 
+/* ELEMENTI BARRA DI RICERCA  */
+
 .user,.notification{
     height: 80px;
 }
@@ -51,6 +53,8 @@ input{
     height: 100%;
     padding-left: 50px;
 }
+
+/* ELEMENTI BARRA NOTIFICA */
 
 .media{
     position: relative;

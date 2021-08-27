@@ -25,8 +25,11 @@
             <main class="rounded shadow bg-white h-100">
 
                 <div class="row h-100">
+                    <!-- COLONNA USER CON LISTA UTENTI E IL SEARCH -->
                     <div class="col-4 p-0 h-100 rounded-end d-flex flex-column bg-color">
+                        <!-- UTENTE -->
                         <section class="flex-shrink-0 user">User</section>
+                        <!-- BARRA NOTIFICHE  -->
                         <section class="flex-shrink-0 notification">
                             <div class="media h-100 d-flex justify-contente-center align-items-center">
                                 <i class="fas fa-bell-slash"></i>
@@ -40,6 +43,7 @@
                                 </div>
                             </div>
                         </section>
+                        <!-- BARRA DI RICERCA -->
                         <section class="p-2 search">
                             <i class="fas fa-search"></i>
                             <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
@@ -47,6 +51,8 @@
                         <section class="flex-grow-1 overflow-auto bg-white">User List</section>
 
                     </div>
+
+                    <!-- COLONNA CHAT -->
                     <div class="col-8 p-0 h-100 rounded-end d-flex flex-column bg-chat-color">
                         <header class="chat-header bg-light-grray"></header>
                         <main class="flex-grow-1 overflow-auto bg-white chat"></main>
