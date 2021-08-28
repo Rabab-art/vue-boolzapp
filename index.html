@@ -28,7 +28,19 @@
                     <!-- COLONNA USER CON LISTA UTENTI E IL SEARCH -->
                     <div class="col-4 p-0 h-100 rounded-end d-flex flex-column bg-color">
                         <!-- UTENTE -->
-                        <section class="flex-shrink-0 user">User</section>
+                        <section class="flex-shrink-0 user">
+                            <div class=" d-flex justify-content-between align-items-center">
+                                <figure class=" d-flex align-items-center">
+                                    <img src="./img/avatar_io.jpg" alt="">
+                                    <p id="name">NomeUtente</p>
+                                </figure>
+                                <div class="icons">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <i class="fas fa-comment-alt"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                        </section>
                         <!-- BARRA NOTIFICHE  -->
                         <section class="flex-shrink-0 notification">
                             <div class="media h-100 d-flex justify-contente-center align-items-center">
@@ -48,15 +60,63 @@
                             <i class="fas fa-search"></i>
                             <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
                         </section>
-                        <section class="flex-grow-1 overflow-auto bg-white">User List</section>
+                        <!-- LISTA UTENTI CHAT -->
+                        <section class="flex-grow-1 overflow-auto bg-white users-list">
+                            <div class=" overflow-auto">
+                                <figure class="">
+                                    <img src="./img/avatar_1.jpg" alt="">
+                                    <p id="name">Michele</p>
+                                </figure>
+                                <figure class="">
+                                    <img src="./img/avatar_2.jpg" alt="">
+                                    <p id="name">Fabio</p>
+                                </figure>
+                                <figure class="">
+                                    <img src="./img/avatar_3.jpg" alt="">
+                                    <p id="name">Samuele</p>
+                                </figure>
+                                <figure class="">
+                                    <img src="./img/avatar_4.jpg" alt="">
+                                    <p id="name">Luisa</p>
+                                </figure>
+
+                            </div>
+                        </section>
 
                     </div>
 
                     <!-- COLONNA CHAT -->
                     <div class="col-8 p-0 h-100 rounded-end d-flex flex-column bg-chat-color">
-                        <header class="chat-header bg-light-grray"></header>
+                        <header class="chat-header bg-color">
+                            <section class="flex-shrink-0 user">
+                                <div class=" d-flex justify-content-between align-items-center">
+                                    <figure class=" d-flex align-items-center ">
+                                        <img src="./img/avatar_1.jpg" alt="">
+                                        <div class="">
+                                            <div>
+                                                Michele
+                                            </div>
+                                            <div>
+                                                <p id="time-chat">Ultimo accesso 12:33 pm</p>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                    <div class="icons ">
+                                        <i class="fas fa-search"></i>
+                                        <i class="fas fa-paperclip"></i>
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
+                            </section>
+                        </header>
                         <main class="flex-grow-1 overflow-auto bg-white chat"></main>
-                        <footer class="chat-footer "></footer>
+                        <footer class="chat-footer ">
+                            <i class="fas fa-smile-beam"></i>
+
+                            <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
+
+                            <i class="fas fa-microphone"></i>
+                        </footer>
 
                     </div>
                 </div>
