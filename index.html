@@ -62,6 +62,7 @@
                         </section>
                         <!-- LISTA UTENTI CHAT -->
                         <section class="flex-grow-1 overflow-auto bg-white users-list">
+
                             <ul class="m-0 p-0">
                                 <li class="d-flex  align-items-center" v-for=" contact in contacts">
                                     <figure class="d-flex align-items-center ">
@@ -103,17 +104,23 @@
                         </header>
                         <!-- IL MAIN DOVE SI VISUALIZZERANNO I MESSAGGI  -->
                         <main class="flex-grow-1 overflow-auto bg-white chat ">
-                            <div id="app">
-                                <ol>
-                                    <li class="w-50">
 
-                                    </li>
+                            <ul>
+                                <li v-for="item in contacts[0].messages" class="message-container p-3 sent"
+                                    :class="item.status">
+                                    <div class="message p-2 rounded-3">
+                                        <p>{{ item.message }}
+                                        </p>
+                                        <time datetime="20021-08-03T10:07"> {{ item.date }}</time>
+                                    </div>
 
-                                </ol>
-                            </div>
+                                </li>
+
+                            </ul>
                         </main>
-
                         <!-- BARRA DEI MESSAGGI  -->
+
+
                         <footer class="chat-footer">
                             <section class="row  h-100 p-2 d-flex  ">
                                 <div class="col-1 h-100 rounded-end d-flex justify-contente-center align-items-center ">
@@ -131,11 +138,23 @@
 
                         </footer>
 
+
+
+
+
+
                     </div>
+
+
+
+
+
                 </div>
             </main>
         </div>
+
     </div>
+
 
 
     <script src="./js/script.js"></script>
