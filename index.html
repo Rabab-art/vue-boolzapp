@@ -12,14 +12,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="./js/users.js"></script>
+
 
     <title>BOOLZAPP</title>
 </head>
 
 <body>
 
-    <div class="app h-100 d-flex align-items-center justify-contente-center">
+    <div class=" app h-100 d-flex align-items-center justify-contente-center">
 
         <div class="container">
             <main class="rounded shadow bg-white h-100">
@@ -29,12 +29,11 @@
                     <div class="col-4 p-0 h-100 rounded-end d-flex flex-column bg-color">
                         <!-- UTENTE -->
                         <section class="flex-shrink-0 user">
-                            <div class=" d-flex justify-content-between align-items-center">
+                            <div class=" d-flex justify-content-between align-items-center" id="app">
                                 <figure class=" d-flex align-items-center">
-                                    <img :src="`./img/avatar${contact.avatar}.jpg`" v-bind:alt="user.name">
-
+                                    <img :src="`img/avatar${user.avatar}.jpg`" v-bind:alt="user.name" />
                                 </figure>
-                                <div id="name" class="h6">{{ user.name }}</div>
+                                <div id="ciccio" class="h6">{{ user.name }}</div>
                                 <div class="icons">
                                     <i class="fas fa-circle-notch"></i>
                                     <i class="fas fa-comment-alt"></i>
@@ -63,25 +62,18 @@
                         </section>
                         <!-- LISTA UTENTI CHAT -->
                         <section class="flex-grow-1 overflow-auto bg-white users-list">
-                            <div class=" overflow-auto">
-                                <figure class="">
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                    <p id="name">Michele</p>
-                                </figure>
-                                <figure class="">
-                                    <img src="./img/avatar_2.jpg" alt="">
-                                    <p id="name">Fabio</p>
-                                </figure>
-                                <figure class="">
-                                    <img src="./img/avatar_3.jpg" alt="">
-                                    <p id="name">Samuele</p>
-                                </figure>
-                                <figure class="">
-                                    <img src="./img/avatar_4.jpg" alt="">
-                                    <p id="name">Luisa</p>
-                                </figure>
+                            <ul class="m-0 p-0">
+                                <li class="d-flex justify-content-between align-items-center"
+                                    v-for=" contact in contacts" id="app">
+                                    <figure class="d-flex align-items-center ">
+                                        <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
+                                    </figure>
+                                    <div class="h-6">
+                                        <div>{{ contact.name }}</div>
+                                    </div>
+                                </li>
 
-                            </div>
+                            </ul>
                         </section>
 
                     </div>

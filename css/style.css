@@ -100,7 +100,7 @@ figure img{
   
 }
 
-figure #name{
+figure #ciccio{
     position: absolute;
     top: 50%;
     left: 80px;
@@ -149,4 +149,17 @@ cursor: pointer;
 
 .fa-smile-beam .fa-microphone{
     background-color: grey;
+}
+
+/* MESSAGGISTICA  */
+
+.chat li{
+    list-style:none ;
+
+border: 1px solid rgb(160, 218, 160);
+border-radius: 5px;
+background-color: rgb(160, 218, 160);
+margin-top: 5px;
+margin-bottom: 5px;
+
 }
