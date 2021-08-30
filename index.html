@@ -19,7 +19,7 @@
 
 <body>
 
-    <div class=" app h-100 d-flex align-items-center justify-contente-center">
+    <div class="  h-100 d-flex align-items-center justify-contente-center" id="app">
 
         <div class="container">
             <main class="rounded shadow bg-white h-100">
@@ -29,7 +29,7 @@
                     <div class="col-4 p-0 h-100 rounded-end d-flex flex-column bg-color">
                         <!-- UTENTE -->
                         <section class="flex-shrink-0 user">
-                            <div class=" d-flex justify-content-between align-items-center" id="app">
+                            <div class=" d-flex  align-items-center justify-content-between">
                                 <figure class=" d-flex align-items-center">
                                     <img :src="`img/avatar${user.avatar}.jpg`" v-bind:alt="user.name" />
                                 </figure>
@@ -63,8 +63,7 @@
                         <!-- LISTA UTENTI CHAT -->
                         <section class="flex-grow-1 overflow-auto bg-white users-list">
                             <ul class="m-0 p-0">
-                                <li class="d-flex justify-content-between align-items-center"
-                                    v-for=" contact in contacts" id="app">
+                                <li class="d-flex  align-items-center" v-for=" contact in contacts">
                                     <figure class="d-flex align-items-center ">
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
                                     </figure>
@@ -115,12 +114,21 @@
                         </main>
 
                         <!-- BARRA DEI MESSAGGI  -->
-                        <footer class="chat-footer ">
-                            <i class="fas fa-smile-beam"></i>
+                        <footer class="chat-footer">
+                            <section class="row  h-100 p-2 d-flex  ">
+                                <div class="col-1 h-100 rounded-end d-flex justify-contente-center align-items-center ">
+                                    <i class="fas fa-smile-beam"></i>
+                                </div>
+                                <div class="col-10 h-100 rounded-end d-flex flex-column">
+                                    <input type="text" class="w-100" placeholder="Scrivi un messaggio">
+                                </div>
+                                <div class="col-1 h-100 rounded-end d-flex justify-contente-center align-items-center ">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
 
-                            <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
+                            </section>
 
-                            <i class="fas fa-microphone"></i>
+
                         </footer>
 
                     </div>

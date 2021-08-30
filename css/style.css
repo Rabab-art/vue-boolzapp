@@ -11,7 +11,7 @@ body {
   }
 
 
-  .app .container{
+  .container{
    height: 90%;
   }
 
@@ -103,8 +103,6 @@ figure img{
 figure #ciccio{
     position: absolute;
     top: 50%;
-    left: 80px;
-    /* transform: translateY(-50%); */
     font-size: 15px;
 }
 /* CHAT AREA  */
@@ -129,26 +127,10 @@ cursor: pointer;
 
 /* BARRA MESSAGGI */
 
-.chat-footer{
-    position: relative;
-}
 
-.chat-footer .fa-smile-beam{
-    position: absolute;
-    left:20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
-.chat-footer .fa-microphone{
-    position: absolute;
-    right:20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.fa-smile-beam .fa-microphone{
-    background-color: grey;
+footer{
+ background-color:  rgb(245, 238, 238);  
 }
 
 /* MESSAGGISTICA  */
