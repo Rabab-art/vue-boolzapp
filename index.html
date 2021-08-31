@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js"></script>
 
     <title>BOOLZAPP</title>
 </head>
@@ -31,7 +31,7 @@
                         <section class="flex-shrink-0 user">
                             <div class=" d-flex  align-items-center justify-content-between">
                                 <figure class=" d-flex align-items-center">
-                                    <img :src="`img/avatar${user.avatar}.jpg`" v-bind:alt="user.name" />
+                                    <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name" />
                                 </figure>
                                 <div id="ciccio" class="h6">{{ user.name }}</div>
                                 <div class="icons">
@@ -64,8 +64,8 @@
                         <section class="flex-grow-1 overflow-auto bg-white users-list">
 
                             <ul class="m-0 p-0">
-                                <li class="d-flex  align-items-center" v-for=" (contact, index) in contacts"
-                                    @click="setCurrentContact(index)">
+                                <li :class="['d-flex',  'align-items-center',{active: index === currentContact} ]"
+                                    v-for=" (contact, index) in contacts" @click="setCurrentContact(index)">
                                     <figure class="d-flex align-items-center ">
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
                                     </figure>
@@ -82,8 +82,11 @@
                     <!-- COLONNA CHAT -->
                     <div class="col-8 p-0 h-100 rounded-end d-flex flex-column bg-chat-color">
                         <header class="chat-header bg-color">
+
                             <section class="flex-shrink-0 user">
+
                                 <div class=" d-flex justify-content-between align-items-center">
+
                                     <figure class=" d-flex align-items-center ">
                                         <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`"
                                             :alt="contacts[currentContact].name">
@@ -92,7 +95,7 @@
                                                 {{ contacts[currentContact].name}}
                                             </div>
                                             <div>
-                                                <p id="time-chat">Ultimo accesso 12:33 pm</p>
+                                                <small id="time-chat">Ultimo accesso alle {{ getLastSeen() }}</small>
                                             </div>
                                         </div>
                                     </figure>
@@ -120,6 +123,7 @@
 
                             </ul>
                         </main>
+
                         <!-- BARRA DEI MESSAGGI  -->
 
 
@@ -129,7 +133,8 @@
                                     <i class="fas fa-smile-beam"></i>
                                 </div>
                                 <div class="col-10 h-100 rounded-end d-flex flex-column">
-                                    <input type="text" class="w-100" placeholder="Scrivi un messaggio">
+                                    <input type="text" class="w-100" placeholder="Scrivi un messaggio"
+                                        v-model.trim="newMessage" @keyup.enter="sendMessage">
                                 </div>
                                 <div class="col-1 h-100 rounded-end d-flex justify-contente-center align-items-center ">
                                     <i class="fas fa-microphone"></i>

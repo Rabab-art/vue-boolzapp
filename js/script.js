@@ -5,6 +5,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#app',
     data: {
+        newMessage: '',
         currentContact: 0,
         user: {
             name: 'Eleonora Rossi',
@@ -29,7 +30,7 @@ const app = new Vue({
                     },
 
                     {
-                        date: '10/01/2021 - 10:07',
+                        date: '10/01/2021 - 1:07',
                         message: 'ok',
                         status: 'received',
                     },
@@ -49,7 +50,7 @@ const app = new Vue({
 
                     },
                     {
-                        date: '10/01/2021 - 10:07',
+                        date: '10/01/2021 - 22:07',
                         message: 'Bene grazie e tu?',
                         status: 'received',
                     },
@@ -115,7 +116,30 @@ const app = new Vue({
     methods: {
         setCurrentContact(index) {
             this.currentContact = index;
-        }
+        },
 
+        getLastSeen() {
+            const messages = this.contacts[this.currentContact].messages;
+            const receivedMessages = messages.filter((message) => {
+                return message.status === 'received' ? true : false;
+            })
+            const lastMessage = receivedMessages[receivedMessages.length - 1];
+
+            return lastMessage.date;
+        },
+
+        sendMessage() {
+            if (!this.newMessage) return;
+            const newMessage = {
+                status: 'sent',
+                message: this.newMessage,
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss")
+            };
+
+            this.contacts[this.currentContact].messages.push(newMessage);
+            this.newMessage = '';
+        },
     },
+
+
 });

@@ -87,6 +87,12 @@ input{
 .media-text h6{
     margin-bottom: 2px;
 }
+/* LISTA CONTATTI */
+.active{
+    background-color: rgb(225, 224, 224);
+}
+
+
 
 /* ELEMENTI DELLO USER */
 figure{
