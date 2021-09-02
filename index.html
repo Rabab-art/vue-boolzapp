@@ -58,7 +58,8 @@
                         <!-- BARRA DI RICERCA -->
                         <section class="p-2 search">
                             <i class="fas fa-search"></i>
-                            <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model="contactFilter" @keyup="filterContact" type="text" class="w-100"
+                                placeholder="Cerca o inizia una nuova chat">
                         </section>
                         <!-- LISTA CONTATTI CHAT -->
                         <section class="flex-grow-1 overflow-auto bg-white users-list">

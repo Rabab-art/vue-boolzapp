@@ -5,6 +5,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#app',
     data: {
+        contactFilter: '',
         newMessage: '',
         currentContact: 0,
         user: {
@@ -139,7 +140,24 @@ const app = new Vue({
             this.contacts[this.currentContact].messages.push(newMessage);
             this.newMessage = '';
         },
+
+        filterContact() {
+            if (!this.contactFilter) return;
+            const filter = this.contactFilter.toLowerCase();
+
+            this.contacts.forEach(contact => {
+
+                var contactName = contactName.toLowerCase();
+
+                if (contactName.includes(filter)) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                };
+            })
+
+
+        },
+
     },
-
-
 });
